@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".SignInActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- USER ICON -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/instagramlogo">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- USERNAME -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="35dp">
+
+                <EditText
+                    android:id="@+id/txtSignInUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:hint="Username"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/black"
+                    android:textColorHint="#d9d9d9"
+                    android:textSize="17sp"
+                    android:background="@drawable/sign_in_edittext_style">
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- PASSWORD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="35dp">
+
+                <com.maksim88.passwordedittext.PasswordEditText
+                    android:id="@+id/txtSignInPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:background="@drawable/sign_in_edittext_style"
+                    android:fontFamily="sans-serif-light"
+                    android:lines="1"
+                    android:textColorHint="#d9d9d9"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- SIGN IN  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginLeft="35dp">
+
+                <Button
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Log In"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:background="@drawable/sign_in_button_style">
+                </Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginLeft="35dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot your login details? Get help logging in."
+                    android:textColor="#a6a6a6">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginLeft="35dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--------------------- OR --------------------"
+                    android:textColor="#a6a6a6"
+                    android:maxLines="1">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginLeft="35dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/facebooklogo">
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Log in with Facebook"
+                    android:textColor="#5851DB"
+                    android:fontFamily="sans-serif-medium">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________"
+        android:textColor="@color/black">
+    </TextView>
+
+    <!-- SIGN UP -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btnSignInSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="sans-serif-light"
+            android:text="Don't have an account? Sign up."
+            android:textColor="@color/black"
+            android:textAllCaps="false">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
