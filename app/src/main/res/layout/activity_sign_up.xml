@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp">
+
+        <!-- INSTAGRAM LOGO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:background="@drawable/instagramlogo">
+            </ImageView>
+        </LinearLayout>
+
+        <!-- APP TEXT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign up to see photos and videos from your
+                friends."
+                android:textColor="#999999"
+                android:gravity="center"
+                android:lines="2">
+            </TextView>
+        </LinearLayout>
+
+
+        <!-- SIGN UP WITH FACEBOOK BUTTON-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/sign_up_button_style">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/facebookicon">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Sign up with Facebook"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium">
+            </TextView>
+
+        </LinearLayout>
+
+        <!-- "OR" TEXT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--------------------- OR --------------------"
+                android:textColor="#a6a6a6"
+                android:maxLines="1">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <!-- E-MAIL EDITTEXT-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/txtSignUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:hint="Email"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textColorHint="#a6a6a6"
+                android:textSize="17sp"
+                android:background="@drawable/sign_up_edittext_style">
+            </EditText>
+        </LinearLayout>
+
+
+        <!-- FULL NAME EDIT TEXT-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/txtSignUpFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:hint="Full Name"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textColorHint="#a6a6a6"
+                android:textSize="17sp"
+                android:background="@drawable/sign_up_edittext_style">
+            </EditText>
+        </LinearLayout>
+
+
+        <!-- USERNAME EDIT TEXT-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+
+            <EditText
+                android:id="@+id/txtSignUpUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:hint="Username"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textColorHint="#a6a6a6"
+                android:textSize="17sp"
+                android:background="@drawable/sign_up_edittext_style">
+            </EditText>
+        </LinearLayout>
+
+
+        <!-- PASSWORD EDIT TEXT-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <com.maksim88.passwordedittext.PasswordEditText
+                    android:id="@+id/txtSignUpPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:background="@drawable/sign_up_edittext_style"
+                    android:fontFamily="sans-serif-light"
+                    android:lines="1"
+                    android:textColorHint="#a6a6a6"
+                    android:textColor="@color/black"
+                    android:textSize="17sp">
+            </com.maksim88.passwordedittext.PasswordEditText>
+        </LinearLayout>
+
+
+        <!-- SIGN UP BUTTON -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp">
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sign_up_button_style"
+                android:text="Sign up"
+                android:fontFamily="sans-serif-medium"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </Button>
+
+        </LinearLayout>
+
+        <!-- APP TEXTVIEW-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="By signing up, you agree to our Terms and Privacy Policy."
+                android:textColor="#999999"
+                android:gravity="center">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- LINE TEXT-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+
+    <!-- SIGN IN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btnSignUpSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="sans-serif-light"
+            android:text="Have an account? Log in."
+            android:textColor="@color/black"
+            android:textAllCaps="false">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

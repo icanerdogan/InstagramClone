@@ -52,7 +52,9 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void SignInToSignUp() {
-        // SIGN UP
+        Intent signUpIntent = new Intent(SignInActivity.this, SignUpActivity.class);
+        startActivity(signUpIntent);
+        finish();
     }
 
 }
