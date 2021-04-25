@@ -7,4 +7,10 @@
 <img src="https://r.resimlink.com/9rGqEpQ.jpg" width="250px" height="500px" align="center"></img>
 </div>
 
+<div align="center">
+<p><b> Register Screen (SignUpActivity) </b></p>
+<img src="https://r.resimlink.com/vENS56.jpg" width="250px" height="500px" align="center"></img>
+</div>
+
+
 <h4>More Coming Soon...</h4>
