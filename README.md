@@ -18,4 +18,11 @@
 
 <br>
 
+<div align="center">
+<p><b> Home Screen (HomeFragment) </b></p>
+<img src="https://r.resimlink.com/I0zBmHdk.jpg" width="250px" height="500px" align="center"></img>
+</div>
+
+<br>
+
 <h4>More Coming Soon...</h4>
