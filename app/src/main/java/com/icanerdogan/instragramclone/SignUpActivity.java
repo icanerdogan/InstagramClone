@@ -9,10 +9,17 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
+import es.dmoral.toasty.Toasty;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     EditText txtEmail, txtFullName, txtUsername, txtPassword;
-    Button btnSignUp, btnSignUpToSignIn;
+    Button SignUp, btnSignUpToSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,27 +37,46 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         txtPassword = findViewById(R.id.txtSignUpPassword);
 
         // Button Components
-        btnSignUp = findViewById(R.id.btnSignUp);
+        SignUp = findViewById(R.id.btnSignUp);
         btnSignUpToSignIn = findViewById(R.id.btnSignUpSignIn);
 
         // Button Click Events
-        btnSignUp.setOnClickListener(this);
+        SignUp.setOnClickListener(this);
         btnSignUpToSignIn.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btnSignIn:
-                SignUp();
+            case R.id.btnSignUp:
+                Register();
                 break;
             case R.id.btnSignUpSignIn:
                 SignUpToSignIn();
                 break;
         }
     }
-    private void SignUp() {
-        // SIGN UP WITH PARSE
+    private void Register() {
+        ParseUser parseUser2 = new ParseUser();
+        parseUser2.setUsername(txtUsername.getText().toString());
+        parseUser2.setPassword(txtPassword.getText().toString());
+        parseUser2.put("email",txtEmail.getText().toString());
+        parseUser2.put("fullName", txtFullName.getText().toString());
+
+        parseUser2.signUpInBackground(new SignUpCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e != null){
+                    Toasty.error(getApplicationContext(), "User Could Not Be Created",Toasty.LENGTH_SHORT, true).show();
+
+                }
+                else{
+                    Toasty.success(getApplicationContext(), "User Created", Toasty.LENGTH_SHORT, true).show();
+
+                }
+            }
+        });
     }
 
     private void SignUpToSignIn() {

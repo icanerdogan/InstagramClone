@@ -28,15 +28,43 @@ android {
     }
 }
 
+ext {
+    parseVersion = "1.26.0"
+}
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // Password Edit Text
     implementation 'com.maksim88:PasswordEditText:v0.9'
+
+    //Material Design
+    implementation 'com.google.android.material:material:1.4.0-alpha02'
+
+    // Parse
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:$parseVersion"
+    // for Google login/signup support (optional)
+    implementation "com.github.parse-community.Parse-SDK-Android:google:$parseVersion"
+    // for Facebook login/signup support (optional)
+    implementation "com.github.parse-community.Parse-SDK-Android:facebook:$parseVersion"
+    // for Twitter login/signup support (optional)
+    implementation "com.github.parse-community.Parse-SDK-Android:twitter:$parseVersion"
+    // for FCM Push support (optional)
+    implementation "com.github.parse-community.Parse-SDK-Android:fcm:$parseVersion"
+    // for Kotlin extensions support (optional)
+    implementation "com.github.parse-community.Parse-SDK-Android:ktx:$parseVersion"
+    // for Kotlin coroutines support (optional)
+    implementation "com.github.parse-community.Parse-SDK-Android:coroutines:$parseVersion"
+    // for RxJava support (optional)
+    implementation "com.github.parse-community.Parse-SDK-Android:rxjava:$parseVersion"
+
+    //Toasty
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
 }
